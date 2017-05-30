@@ -2,7 +2,7 @@
 
 @section('template_css')
 <!-- BASE CSS -->
-<link href="{{ URL::secure_asset('/css/base.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('/css/base.css') }}" rel="stylesheet">
 
 <!--<link href="{{ URL::asset('/css/bootstrap.min.css') }}" rel="stylesheet">-->
 <link href="{{ URL::asset('/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
