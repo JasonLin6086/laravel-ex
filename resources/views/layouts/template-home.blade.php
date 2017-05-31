@@ -102,11 +102,9 @@
     .left_img, .right_img {
         max-width: 100%;
     }
-</style>            
+</style>
             <div class="left_div">
-                <a href="https://play.google.com/store/apps/details?id=com.lovefoodies.wilsonzhou.android">
                 <img class="left_img" src="/image/android_qr.png">
-                </a>
             </div>
             <div class="right_div">
                 <img class="right_img" src="/image/ios.jpg">
@@ -191,7 +189,7 @@ $(document).ready(function () {
     @if (empty($sellers) && empty($dishes) && empty($wishes))
         getData('/dishes/newest');
     @endif
-    
+
     $("#search-input-div").detach().appendTo('#search-bar-home');
 });
 
