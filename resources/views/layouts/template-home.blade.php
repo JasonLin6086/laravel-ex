@@ -11,7 +11,7 @@
 <link href="{{ URL::asset('/css/custom/homepagestyle.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('/css/bootstrap-social.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('/css/style.css') }}" rel="stylesheet">
-<link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
+<link href="{{ URL::asset('/css/w3.css') }}" rel="stylesheet">
 
 <link href="{{ URL::asset('/css/custom/style.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('/css/fonts/font-awesome.min.css') }}" rel="stylesheet">
