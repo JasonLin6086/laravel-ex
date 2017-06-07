@@ -1,11 +1,11 @@
 <?php namespace App\Libraries {
     class utils {
-
-        private $token = 'hcLAyKIaiFqH9BRz77Mc5rI1AzODeaw7cQaeoIi2';
-        private $reg_exp = '/(?!https:\/\/lovefoodies\.us(.*).png)(https:\/\/lovefoodies\.us)/';
+        private $hostname = '104.192.6.248';
+        private $token = 'CNy571WAgrPrbrNi3TTT5ipuN7Z0pVYfIs1bgTXS';
+        private $reg_exp = '/(?!https:\/\/104\.192\.6\.248\/(.*).png)(https:\/\/104\.192\.6\.248)/';
 
         public function get_data($api, $view) {
-            $url = "https://lovefoodies.us/" . $api . "?view=" . $view;
+            $url = "https://" . $this->hostname . "/" . $api . "?view=" . $view;
             $headers = array(
                             'api-custom-token: ' . $this->token
                        );
