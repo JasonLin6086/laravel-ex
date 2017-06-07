@@ -32,8 +32,8 @@
 
         <!-- Template CSS =============================================== -->
             @yield('template_css')
-        <!-- End Template CSS =========================================== -->   
-        
+        <!-- End Template CSS =========================================== -->
+
         <link href="{{ URL::asset('/css/custom/template.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('/css/custom/public.search-input.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('/css/custom/map-location-add.css') }}" rel="stylesheet">
@@ -52,7 +52,7 @@
                     <div class="sk-rect4"></div>
                     <div class="sk-rect5"></div>
                 </div>
-            </div><!-- End Preload -->    
+            </div><!-- End Preload -->
 
             <!-- Header ================================================== -->
             <header id="header-bar">
@@ -73,9 +73,9 @@
                                 <ul>
                                     <!-- Authentication Links -->
                                     @if (Auth::guest())
-                                    <!--li><input type="submit" value="Become a Seller" class="btn_1" id="submit-newsletter_2" onclick="location.href='{{ url('seller/profile') }}';"></li>
+                                    <!--li><input type="submit" value="Become a Seller" class="btn_1" id="submit-newsletter_2" onclick="location.href='{{ url('seller/profile') }}';"></li-->
                                     <li><a href="{{ url('/login') }}">Login</a></li>
-                                    <li><a href="{{ url('/register') }}">Sign Up</a></li-->
+                                    <li><a href="{{ url('/register') }}">Sign Up</a></li>
                                     @else
                                         @if(!Auth::user()->isseller)
                                             <li><input type="submit" value="Become a Seller" class="btn_1" id="submit-newsletter_2" onclick="location.href='{{ url('seller/profile') }}';"></li>
@@ -92,7 +92,7 @@
                                                 <li><a href="{{ url('/buyer/order-list') }}">My order</a></li>
                                                 <li><a href="{{ url('/buyer/profile') }}">My profile</a></li>
                                                 <li><a href="{{ url('/buyer/favorite') }}">My favorite</a></li>
-                                                <li><a href="{{ url('/buyer/wish-list') }}">My wishes</a></li>                                                 
+                                                <li><a href="{{ url('/buyer/wish-list') }}">My wishes</a></li>
                                                 <li>
                                                     <a href="{{ url('/logout') }}"
                                                        onclick="event.preventDefault();
@@ -116,11 +116,11 @@
                     </div><!-- End row -->
                 </div><!-- End container -->
             </header>
-            <!-- End Header =============================================== -->       
+            <!-- End Header =============================================== -->
 
             <!-- SubHeader =============================================== -->
                 @yield('subheader')
-            <!-- End SubHeader ============================================ -->   
+            <!-- End SubHeader ============================================ -->
 
             <!-- Page Content ============================================= -->
                 @yield('t1_content')
@@ -154,7 +154,7 @@
                             </p>
                             <div id="message-newsletter_2">
                             </div>
-                            
+
                             <form method="post" name="newsletter_2" id="newsletter_2">
                                 {{ csrf_field() }}
                                 <div class="form-group">
@@ -163,7 +163,7 @@
                                 <!--a href="{{ url('/newsletter') }}" class="btn_1" id="submit-newsletter_2">Subscribe</a-->
                                 <input type="submit" value="Subscribe" class="btn_1" id="submit-newsletter_2">
                             </form>
-                            
+
                         </div>
                         <!--div class="col-md-2 col-sm-3">
                             <h3>Settings</h3>
@@ -205,20 +205,20 @@
                     </div><!-- End row -->
                 </div><!-- End container -->
             </footer>
-            <!-- End Footer =============================================== -->    
+            <!-- End Footer =============================================== -->
         </div>
-        
+
         <!-- Google Map and select location modal -->
         <script src="{{ URL::asset('/js/custom/map-location-add.js')}}" type="text/javascript"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_PLACES_API_KEY')}}&libraries=places&callback=initMap"></script>
         <script src="{{ URL::asset('/js/custom/buyer.location-add-modal.js') }}"></script>
 
         <!-- Search Dropdown Menu -->
-        <script src="{{ URL::asset('/js/custom/public.search-input.js') }}"></script>        
-        
+        <script src="{{ URL::asset('/js/custom/public.search-input.js') }}"></script>
+
         <!-- Template JS ================================================ -->
             @yield('template_js')
-        <!-- End Template JS ============================================ -->  
-        
+        <!-- End Template JS ============================================ -->
+
     </body>
 </html>
