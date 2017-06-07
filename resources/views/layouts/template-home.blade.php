@@ -187,7 +187,7 @@ $(document).ready(function () {
 
     // If no data, get newest dishes
     @if (empty($sellers) && empty($dishes) && empty($wishes))
-        getData('/dishes/newest');
+        //getData('/dishes/newest');
     @endif
 
     $("#search-input-div").detach().appendTo('#search-bar-home');
